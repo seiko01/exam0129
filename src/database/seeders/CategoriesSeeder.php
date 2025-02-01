@@ -29,6 +29,8 @@ class CategoriesSeeder extends Seeder
             DB::table('categories')->insert([
                 'id' => $index + 1,
                 'content' => $category['content'],
+                'created_at' => now(),
+                'updated_at' => now(),
             ]);
         }
     }

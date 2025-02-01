@@ -20,14 +20,14 @@ class ContactController extends Controller
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tell1', 'tell2', 'tell3', 'address', 'building', 'category_id', 'detail']);
         $contact['name'] = $contact['first_name'] . ' ' . $contact['last_name'];
         $contact['tell'] = $contact['tell1'] . $contact['tell2'] . $contact['tell3'];
-        $contact['gender'] = (int)$contact['gender'];
+        $contact['gender_label'] = $this->getGenderLabel($contact['gender']);
         $category = Category::find($contact['category_id']);
         $contact['category_label'] = $category ? $category->content : '未選択';
 
         return view('confirm', ['contact' => $contact]);
     }
 
-    public function GenderLabel($gender)
+    public function getGenderLabel($gender)
     {
         $gender = (int)$gender;
 
@@ -52,6 +52,7 @@ class ContactController extends Controller
         $contact['tell'] = $request->input('tell1') . $request->input('tell2') . $request->input('tell3');
 
         $contact['gender'] = (int)$request->input('gender');
+        $contact['gender_label'] = $this->getGenderLabel($contact['gender']);
 
         Contact::create($contact);
 
