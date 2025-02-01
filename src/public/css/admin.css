@@ -1,0 +1,170 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #E0DFDE;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #8B7969;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logout-form {
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.btn-logout {
+    background-color: #f4ede5;
+    color: #D9C6B5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.admin__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.admin__heading {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #8B7969;
+}
+
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0 5%;
+}
+
+.search-fields input,
+.search-fields select,
+.btn-search,
+.btn-reset {
+    width: 200px;
+    /* 各要素の幅 */
+    max-width: 250px;
+    /* 最大幅を制限 */
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    /* 余白を含む幅計算 */
+}
+
+.btn-search {
+    background-color: #8B7969;
+    color: #fff;
+    border: none;
+}
+
+.btn-reset {
+    background-color: #D9C6B5;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    /* 上下に20pxのスペース、左右は自動でセンタリング */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.table th {
+    background-color: #8B7969;
+    color: #fff;
+}
+
+.pagination {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 5px;
+    /* アイテム間の隙間 */
+    flex-wrap: nowrap;
+    /* 折り返しを防ぐ */
+    overflow-x: auto;
+}
+
+.pagination-top {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pagination-top span {
+    font-size: 12px;
+    display: inline-flex;
+    gap: 5px;
+}
+
+.export-page {
+    display: flex;
+    gap: 5px;
+    padding: 0 10%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    /* 要素を左右に分けて配置 */
+    align-items: center;
+}
+
+.btn-export {
+    background-color: #E1DBD699;
+    color: #8B7969;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+}
+
+.table-wrapper {
+    padding: 20px 10%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    flex-wrap: nowrap;
+}
