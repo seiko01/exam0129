@@ -52,6 +52,7 @@
         </form>
         <div class="export-page">
             <a href="{{ route('admin.export', request()->query()) }}" class="btn-export">エクスポート</a>
+            {{ $contacts->links('vendor.pagination.default') }}
         </div>
         <div class="table-wrapper">
             <table class="table">
@@ -94,7 +95,6 @@
                                 <p><strong>建物名:</strong> <span>{{ $contact->building }}</span></p>
                                 <p><strong>お問い合わせの種類:</strong> <span>{{ $contact->category ? $contact->category->content : '未選択' }}</span></p>
                                 <p><strong>お問い合わせの内容:</strong> <span>{{ $contact->detail }}</span></p>
-                        <!-- 削除ボタン -->
                                 <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" class="modal-delete-form">
                                     @csrf
                                     @method('DELETE')
