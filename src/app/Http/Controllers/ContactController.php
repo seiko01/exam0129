@@ -9,17 +9,17 @@ use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $categories = Category::all();
-        return view('index', ['categories' => $categories]);
-    }
-
+        return view('index', ['categories' => $categories, 'request' => $request])->withInput($request->all());
+}
     public function confirm(ContactRequest $request)
     {
         $contact = $request->only([
             'last_name', 'first_name', 'gender', 'email', 'tell1', 'tell2', 'tell3', 'address', 'building', 'category_id', 'detail'
         ]);
+
         $contact['name'] = $contact['first_name'] . ' ' . $contact['last_name'];
         $contact['tell'] = $contact['tell1'] . $contact['tell2'] . $contact['tell3'];
         $contact['gender_label'] = $this->getGenderLabel($contact['gender']);
@@ -50,9 +50,6 @@ class ContactController extends Controller
         $contact = $request->only([
             'last_name', 'first_name', 'gender', 'email', 'tell', 'address', 'building', 'category_id', 'detail'
         ]);
-        $contact['tell'] = $request->input('tell1') . $request->input('tell2') . $request->input('tell3');
-        $contact['gender'] = (int)$request->input('gender');
-        $contact['gender_label'] = $this->getGenderLabel($contact['gender']);
 
         Contact::create($contact);
 
