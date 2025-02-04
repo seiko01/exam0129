@@ -1,7 +1,10 @@
-#　お問合せフォーム
-##　環境構築
-**Dockerビルド**
-1.リンク
+# お問合せフォーム
+
+## 環境構築
+
+Dockerビルド
+
+1.https://github.com/seiko01/exam0129
 2.DockerDesktopアプリの立ち上げ
 3.`docker-compose up -d --build`
 
@@ -13,7 +16,7 @@
     platform: linux/amd64
     environment:
 ```
-**Laravel環境構築**
+Laravel環境構築
 1. `docker-compose exec php bash`
 2. `composer install`
 3. 「.env.example」ファイルから「.env」を作成
@@ -42,12 +45,12 @@ php artisan db:seed
 ```
 
 ## 使用技術(実行環境)
-・PHP 7.4.9
-・Laravel 8.83.29
-・mysql 8.0.26
+* PHP 7.4.9
+* Laravel 8.83.29
+* mysql 8.0.26
 
-##　ER図
+## ER図
 
-##　URL
-・開発環境：http://localhost/
-・phpMyAdmin：http://localhost:8080/
+## URL
+* 開発環境：http://localhost/
+* phpMyAdmin：http://localhost:8080/
