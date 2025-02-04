@@ -4,9 +4,9 @@
 
 Dockerビルド
 
-1.https://github.com/seiko01/exam0129
-2.DockerDesktopアプリの立ち上げ
-3.`docker-compose up -d --build`
+1. git@github.com:seiko01/exam0129.git
+2. DockerDesktopアプリの立ち上げ
+3. `docker-compose up -d --build`
 
 > *Mac の M3 チップの PC の場合、ビルドができないエラーが出た際は、docker- compose.ymlファイルの「mysql」内に「platform」の項目を追加で記載してください*
 
@@ -20,7 +20,7 @@ Laravel環境構築
 1. `docker-compose exec php bash`
 2. `composer install`
 3. 「.env.example」ファイルから「.env」を作成
-4. .envに以下の環境変数を追加
+4. 「.env」に以下の環境変数を追加
 
 ```bash
 DB_CONNECTION=mysql
