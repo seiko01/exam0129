@@ -50,7 +50,7 @@ php artisan db:seed
 * mysql 8.0.26
 
 ## ER図
-![ER Diagram](/.drawio/.diagram.png)
+![ER Diagram](/img/drawio.png)
 
 ## URL
 * 開発環境：http://localhost/
