@@ -4,7 +4,7 @@
 
 Dockerビルド
 
-1. git@github.com:seiko01/exam0129.git
+1. `git clone git@github.com:seiko01/exam0129.git`
 2. DockerDesktopアプリの立ち上げ
 3. `docker-compose up -d --build`
 
@@ -50,6 +50,7 @@ php artisan db:seed
 * mysql 8.0.26
 
 ## ER図
+![ER Diagram](.drawio/diagram.png)
 
 ## URL
 * 開発環境：http://localhost/
