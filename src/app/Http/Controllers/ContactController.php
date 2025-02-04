@@ -12,7 +12,7 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         $categories = Category::all();
-        return view('index', ['categories' => $categories, 'request' => $request])->withInput($request->all());
+        return view('index', ['categories' => $categories])->withInput($request->all());
 }
     public function confirm(ContactRequest $request)
     {

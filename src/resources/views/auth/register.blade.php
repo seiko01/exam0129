@@ -15,7 +15,7 @@
     <h2>Register</h2>
 </div>
     <div class="register-container">
-        <form class="form" action="/register" method="post">
+        <form class="form" action="{{route('register')}}" method="post">
             @csrf
             <div class="form__group">
                 <div class="form__group-title">

@@ -28,27 +28,28 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お名前</th>
                             <td class="confirm-table__text">
-                                <input type="text" value="{{ old('name', $contact['name']) }}" readonly />
-                                <input type="hidden" name="first_name" value="{{ old('first_name', $contact['first_name']) }}" />
-                                <input type="hidden" name="last_name" value="{{ old('last_name', $contact['last_name']) }}" />
+                                <input type="text" value="{{ $contact['name'] }}" readonly />
+                                <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}" />
+                                <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}" />
+                            </td>
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">性別</th>
                             <td class="confirm-table__text" style="text-align: left;">{{ $contact['gender_label'] }}
-                                <input type="hidden" name="gender" value="{{ old('gender', $contact['gender']) }}" />
+                                <input type="hidden" name="gender" value="{{ $contact['gender'] }}" />
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">メールアドレス</th>
                             <td class="confirm-table__text">
-                                <input type="email" name="email" value="{{ old('email', $contact['email']) }}" readonly />
+                                <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">電話番号</th>
                             <td class="confirm-table__text">
-                                <input type="tel" name="tell" value="{{ old('tell', $contact['tell']) }}" readonly />
+                                <input type="tel" name="tell" value="{{ $contact['tell'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
@@ -60,27 +61,28 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">建物名</th>
                             <td class="confirm-table__text">
-                                <input type="text" name="building" value="{{old('building', $contact['building']) }}" readonly />
+                                <input type="text" name="building" value="{{ $contact['building'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お問い合わせの種類</th>
                             <td class="confirm-table__text">
                                 <input type="text" value="{{ $contact['category_label'] }}" readonly />
-                                <input type="hidden" name="category_id" value="{{old('category_id', $contact['category_id']) }}" readonly />
+                                <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お問い合わせ内容</th>
                             <td class="confirm-table__text">
-                                <input type="text" name="detail" value="{{old('detail', $contact['detail']) }}" readonly />
+                                <input type="text" name="detail" value="{{ $contact['detail'] }}" readonly />
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="form__button">
                     <button class="form__button-submit" type="submit">送信</button>
-                    <a href="{{ route('home') }}" class="form__button-back">修正</a>
+                    <a class="form__button-back" href="{{ route('home') }}">修正</a>
+
                 </div>
             </form>
         </div>
