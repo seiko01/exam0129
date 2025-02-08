@@ -81,7 +81,7 @@
                 </div>
                 <div class="form__button">
                     <button class="form__button-submit" type="submit">送信</button>
-                    <a class="form__button-back" href="{{ route('home') }}">修正</a>
+                    <button class="form__button-submit" type="submit" name="back">修正</button>
                 </div>
             </form>
         </div>

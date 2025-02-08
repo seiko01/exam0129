@@ -121,7 +121,7 @@
                                 <div class="form__error">
                                     @error('tell3')
                                     {{ $message }}
-                                @enderror
+                                    @enderror
                                 </div>
                             </div>
                         </div>

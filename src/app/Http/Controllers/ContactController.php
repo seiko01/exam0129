@@ -47,6 +47,10 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        if ($request->has('back')) {
+            return redirect('/')->withInput();
+        }
+
         $contact = $request->only([
             'last_name', 'first_name', 'gender', 'email', 'tell', 'address', 'building', 'category_id', 'detail'
         ]);
